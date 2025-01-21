@@ -1,0 +1,15 @@
+<?php
+
+$heading = "My Notes";
+
+$config = require 'config.php';
+$db = new Database($config['database']);
+
+$notes = $db->query(('Select * from notes where user_id= 3'))->fetchAll();
+
+
+
+
+
+
+require "views/notes.view.php";

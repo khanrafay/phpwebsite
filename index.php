@@ -2,9 +2,9 @@
 
 <?php
 require "functions.php";
-
-//require "router.php";
 require "Database.php";
+require "Response.php";
+require "router.php";
 
 //Connect databse and execute query
 
@@ -20,7 +20,7 @@ $query = "SELECT * FROM users where id = :id";
 $posts = $db->query($query, [':id' => $id])->fetchAll();
 
 
-dd($posts);
+// dd($posts);
 // foreach ($posts as $post) {
 //     echo "<li>" . $post['title'] . "</li>";
 // }
