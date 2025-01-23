@@ -12,12 +12,12 @@ $config = require 'config.php';
 
 $db = new Database($config['database']);
 
-$id = $_GET['id'];
+// $id = $_GET['id'];
 
-$query = "SELECT * FROM users where id = :id";
+// $query = "SELECT * FROM users where id = :id";
 
 
-$posts = $db->query($query, [':id' => $id])->fetchAll();
+// $posts = $db->query($query, [':id' => $id])->findAll();
 
 
 // dd($posts);

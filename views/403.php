@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require("partials/header.php") ?>
+<?php require("partials/nav.php") ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 
-<body>
-    <p>
-        You're not allowed to access this page.
-    </p>
-</body>
 
-</html>
+<main>
+    <p>You're not allowed to access this page</p>
+</main>
+
+
+<?php require("partials/footer.php") ?>

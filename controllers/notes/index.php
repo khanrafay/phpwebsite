@@ -5,11 +5,12 @@ $heading = "My Notes";
 $config = require 'config.php';
 $db = new Database($config['database']);
 
-$notes = $db->query(('Select * from notes where user_id= 3'))->fetchAll();
+
+$notes = $db->query(('Select * from notes'))->findAll();
 
 
 
 
 
 
-require "views/notes.view.php";
+require "views/notes/index.view.php";
