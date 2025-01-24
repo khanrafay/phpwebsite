@@ -15,7 +15,18 @@ function urlIs($value)
 
 function authorize($condition, $status = RESPONSE::FORBIDDEN)
 {
-    if (!$condition) {
+    if ($condition) {
         abort($status);
     }
+}
+
+function base_path($path)
+{
+    return BASE_PATH . $path;
+}
+
+function view($path, $attributes = [])
+{
+    extract($attributes);
+    require base_path('views/' . $path);
 }

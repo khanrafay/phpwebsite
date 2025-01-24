@@ -1,17 +1,14 @@
 <?php
 
-require "Validator.php";
-$config = require 'config.php';
+require base_path("Validator.php");
+$config = require base_path('config.php');
 
 $db = new Database($config['database']);
-
-$heading = "Create a Note";
-
-
+$errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $errors = [];
+
 
 
     if (!Validator::validateString($_POST['body'], 1, 1000)) {
@@ -28,4 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-require 'views/notes/create.view.php';
+require view("notes/create.view.php", [
+    "heading" => "Create a Note",
+    "errors" => $errors
+]);
