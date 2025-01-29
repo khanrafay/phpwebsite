@@ -5,7 +5,7 @@
 
 <main>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <form class="max-w-sm" method="POST">
+        <form class="max-w-sm" method="POST" action="/notes">
             <label for="body" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Note</label>
             <textarea name="body" id="body" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Note..."><?= $_POST['body'] ?? '' ?></textarea>
             <p class="text-red-500 mt-2 text-xs ml-1"><?= $errors['body'] ?? '' ?></p>
