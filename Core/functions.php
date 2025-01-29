@@ -1,4 +1,7 @@
 <?php
+
+use Core\Response;
+
 function dd($value)
 {
     echo "<pre>";
@@ -19,6 +22,17 @@ function authorize($condition, $status = RESPONSE::FORBIDDEN)
         abort($status);
     }
 }
+
+function abort($code = 404)
+{
+    http_response_code($code);
+
+    // echo "Sorry, Not found";
+    require base_path("views/{$code}.php");
+
+    die();
+}
+
 
 function base_path($path)
 {
